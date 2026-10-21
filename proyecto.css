@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fondo: #0b1110;
+  --panel: #142019;
+  --verde: #b8ff3b;
+  --blanco: #f5f8f4;
+  --gris: #a8b5ae;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--blanco);
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  gap: 20px;
+  padding: 22px 7%;
+  border-bottom: 1px solid #88918b;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: var(--verde);
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #d1d9d3;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: var(--verde);
+}
+ 
+
+.cart {
+  border: 1px solid #48564b;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.hero {
+  background-image: url(28364ad1-45ba-44be-98ed-7626ec6449f4.png);
+  background-position: right 100px center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 75px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.etiqueta {
+  color: var(--verde);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 75px);
+  line-height: 1;
+  margin: 20px 0;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: var(--verde);
+}
+
+.hero-text > p:not(.etiqueta) {
+  color: var(--gris);
+  line-height: 1.7;
+  max-width: 430px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--verde);
+  color: #11180c;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.hero-image {
+  height: 350px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--panel);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catalogo {
+  padding: 40px 7% 80px;
+}
+
+.catalogo h2,
+.marcas h2 {
+  font-size: 34px;
+  margin: 12px 0;
+}
+
+.subtitulo {
+  color: var(--gris);
+  margin-bottom: 30px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 90vw;
+  gap: 22px;
+  margin: 28px auto;
+}
+
+.producto {
+  background: var(--panel);
+  border: 1px solid #28372d;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform .2s, border-color .2s;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  border-color: var(--verde);
+}
+
+.producto > img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #1d2b21;
+}
+
+.info {
+  padding: 20px;
+}
+
+.marca {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.nike {
+  color: #ff764d;
+}
+
+.adidas {
+  color: #d6e3db;
+}
+
+.puma {
+  color: var(--verde);
+}
+
+.info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.info > p:not(.marca):not(.precio) {
+  color: var(--gris);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 11px;
+  background: var(--fondo);
+  color: white;
+  border: 1px solid #3b4a40;
+  border-radius: 7px;
+}
+
+.precio {
+  font-size: 24px;
+  font-weight: 900;
+  margin: 18px 0;
+}
+
+.info button {
+  width: 100%;
+  padding: 13px;
+  background: var(--verde);
+  color: #11180c;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter .2s;
+}
+
+.info button:hover {
+  filter: brightness(.9);
+}
+
+.marcas {
+  padding: 55px 7%;
+  background: #111a15;
+  text-align: center;
+}
+
+.marcas-lista {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+@keyframes  {
+  
+  
+}
+
+footer {
+  padding: 30px 7%;
+  border-top: 1px solid #29372e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  color: var(--gris);
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 18px 5%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 5%;
+    background-image: none;
+  }
+
+  .hero-image {
+    height: 270px;
+  }
+
+  .catalogo {
+    padding: 35px 5% 55px;
+  }
+
+  .productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  footer {
+    padding: 25px 5%;
+  }
+}
+
+@media (max-width: 520px) {
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  .producto > img {
+    height: 250px;
+  }
+
+  .marcas-lista {
+    gap: 25px;
+    font-size: 21px;
+  }
+
+  .hero h1 {
+    font-size: 49px;
+  }
+}

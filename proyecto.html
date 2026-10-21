@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botines FC | Tienda de fútbol</title>
+  <link rel="stylesheet" href="proyecto.css">
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">BOTINES<span>FC.</span></a>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Botines</a>
+      <a href="#marcas">Marcas</a>
+    </nav>
+
+    <a href="#catalogo" class="cart">🛒 Comprar</a>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <p class="etiqueta">EQUIPATE PARA GANAR</p>
+      <h1>Tu juego.<br>Tu cancha.<br><span>Tu gol.</span></h1>
+      <p>Encontrá tus botines ideales y preparate para dejar todo en la cancha.</p>
+      <a href="#catalogo" class="btn">VER BOTINES</a>
+    </div>
+
+
+  </section>
+
+  <section class="catalogo" id="catalogo">
+    <p class="etiqueta">NUESTRA COLECCIÓN</p>
+    <h2>Elegí tus botines</h2>
+    <p class="subtitulo">Nike, Adidas y Puma en un solo lugar.</p>
+
+    <div class="productos">
+
+      <article class="producto">
+        <img src="IO8225-900_A_PREM.webp"
+             alt="Botines Nike">
+        <div class="info">
+          <p class="marca nike">NIKE</p>
+          <h3>Mercurial Vapor</h3>
+          <p>Velocidad y agilidad.</p>
+          <label for="talle1">Elegí tu talle:</label>
+          <select id="talle1">
+            <option>38</option><option>39</option><option>40</option>
+            <option>41</option><option>42</option><option>43</option>
+          </select>
+          <p class="precio">$125.000</p>
+          <button onclick="comprar('Nike Mercurial Vapor', 'talle1', 125000)">
+            Comprar
+          </button>
+        </div>
+      </article>
+
+      <article class="producto">
+        <img src="Botines_PREDATOR_PRO_con_Lengueta_Plegable_para_Terreno_Firme_Rojo_JS0950_db22_mdl.avif"
+             alt="Botines Adidas">
+        <div class="info">
+          <p class="marca adidas">ADIDAS</p>
+          <h3>Predator Pro</h3>
+          <p>Control y precisión.</p>
+          <label for="talle2">Elegí tu talle:</label>
+          <select id="talle2">
+            <option>38</option><option>39</option><option>40</option>
+            <option>41</option><option>42</option><option>43</option>
+          </select>
+          <p class="precio">$139.000</p>
+          <button onclick="comprar('Adidas Predator Pro', 'talle2', 139000)">
+            Comprar
+          </button>
+        </div>
+      </article>
+
+      <article class="producto">
+        <img src="bota-puma-future-8-match-fgag-naranja-0.webp"
+             alt="Botines Puma">
+        <div class="info">
+          <p class="marca puma">PUMA</p>
+          <h3>Future Match</h3>
+          <p>Comodidad y potencia.</p>
+          <label for="talle3">Elegí tu talle:</label>
+          <select id="talle3">
+            <option>38</option><option>39</option><option>40</option>
+            <option>41</option><option>42</option><option>43</option>
+          </select>
+          <p class="precio">$112.000</p>
+          <button onclick="comprar('Puma Future Match', 'talle3', 112000)">
+            Comprar
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="marcas" id="marcas">
+    <h2>Las marcas que buscás</h2>
+    <div class="marcas-lista">
+      <span>NIKE</span>
+      <span>ADIDAS</span>
+      <span>PUMA</span>
+    </div>
+  </section>
+
+  <footer>
+    <a href="#" class="logo">BOTINES<span>FC.</span></a>
+    <p>© 2026 Botines FC - Tienda de fútbol</p>
+    <p>Jair Garcia. </p>
+  </footer>
+
+  <script>
+    function comprar(producto, idTalle, precio) {
+      const talle = document.getElementById(idTalle).value;
+      const mensaje = `Hola, quiero comprar ${producto}, talle ${talle}. Precio: $${precio.toLocaleString('es-AR')}.`;
+      const confirmar = confirm(mensaje + "\n\n¿Querés consultar el pedido por WhatsApp?");
+
+      if (confirmar) {
+        // Reemplazá este número por tu WhatsApp.
+        const telefono = "5490000000000";
+        if (telefono === "5490000000000") {
+          alert("Configurá tu número de WhatsApp en el código HTML.");
+          return;
+        }
+        window.open(
+          "https://wa.me/" + telefono + "?text=" +
+          encodeURIComponent(mensaje),
+          "_blank"
+        );
+      }
+    }
+  </script>
+
+</body>
+</html>
